@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="268.0" prefWidth="313.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="doctorfx.AddSpecialtyController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="NEVER" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+  </rowConstraints>
+   <children>
+      <Label text="Existing &#10;Specialties:">
+         <GridPane.margin>
+            <Insets left="10.0" />
+         </GridPane.margin>
+      </Label>
+      <Label text="New Specialty:" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets bottom="10.0" left="10.0" />
+         </GridPane.margin>
+      </Label>
+      <HBox prefHeight="29.0" prefWidth="334.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <children>
+            <Button mnemonicParsing="false" onMouseClicked="#add" text="Add">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onMouseClicked="#cancel" text="Cancel" />
+         </children>
+      </HBox>
+      <TextField fx:id="specialtyEntry" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets bottom="10.0" right="10.0" />
+         </GridPane.margin>
+      </TextField>
+      <TextArea fx:id="specialtyList" editable="false" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+         <GridPane.margin>
+            <Insets bottom="10.0" right="10.0" top="10.0" />
+         </GridPane.margin>
+      </TextArea>
+   </children>
+</GridPane>
